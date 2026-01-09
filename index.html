@@ -3,159 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEVNEX OFFICIAL | L4VNNN</title>
+    <title>LEVNEX SCRIPT HUB | OFFICIAL</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            margin: 0;
-            padding: 0;
             background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%);
             color: #fff;
             font-family: 'Poppins', sans-serif;
-            overflow: hidden;
+            min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            height: 100vh;
         }
-
-        #stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-
-        .glass-card {
-            position: relative;
-            z-index: 10;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 30px;
-            padding: 40px;
-            width: 90%;
-            max-width: 400px;
-            text-align: center;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
-        }
-
         .neon-text {
             font-family: 'Orbitron', sans-serif;
             text-shadow: 0 0 10px #8a2be2, 0 0 20px #8a2be2;
-            letter-spacing: 5px;
-            color: #d8b4fe;
         }
-
-        .profile-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 3px solid #8a2be2;
-            padding: 5px;
-            box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
-            margin-bottom: 20px;
-        }
-
-        .btn-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background: rgba(138, 43, 226, 0.1);
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
             border: 1px solid rgba(138, 43, 226, 0.3);
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 15px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: 600;
+            border-radius: 20px;
+            padding: 25px;
+            width: 90%;
+            max-width: 500px;
             transition: 0.3s;
         }
-
-        .btn-link:hover {
-            background: rgba(138, 43, 226, 0.3);
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+        .glass-card:hover {
+            border-color: #8a2be2;
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
         }
-
-        .glow-pulse {
-            animation: pulse 2s infinite;
+        .btn-copy {
+            background: linear-gradient(45deg, #8a2be2, #4b0082);
+            font-weight: bold;
+            transition: 0.3s;
         }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(138, 43, 226, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(138, 43, 226, 0); }
+        .btn-copy:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px #8a2be2;
+        }
+        canvas {
+            position: fixed;
+            top: 0; left: 0; z-index: -1;
         }
     </style>
 </head>
-<body>
+<body class="p-6">
 
     <canvas id="stars"></canvas>
 
-    <div class="glass-card">
-        <img src="https://via.placeholder.com/150/8a2be2/ffffff?text=L" alt="L4VNNN" class="profile-img mx-auto">
-        <h1 class="neon-text text-2xl font-bold mb-1">LEVNEX</h1>
-        <p class="text-purple-300 text-xs tracking-widest uppercase mb-8">Owned by L4VNNN</p>
-
-        <div class="links">
-            <a href="https://saweria.co/USER_LU" target="_blank" class="btn-link glow-pulse">
-                <span>💰</span> SAWERIA / DONATE
-            </a>
-            
-            <a href="https://discord.gg/LINK_DISCORD_LU" target="_blank" class="btn-link">
-                <span>👾</span> JOIN DISCORD
-            </a>
-
-            <a href="#" class="btn-link" style="opacity: 0.7;">
-                <span>📂</span> GET LATEST SCRIPT
-            </a>
-        </div>
-
-        <p class="text-[10px] text-gray-500 mt-10 tracking-widest uppercase italic">The galaxy belongs to us</p>
+    <div class="text-center mb-10 mt-5">
+        <h1 class="neon-text text-3xl font-bold tracking-[5px] mb-2">LEVNEX HUB</h1>
+        <p class="text-purple-300 text-xs tracking-widest uppercase">Owned by L4VNNN</p>
     </div>
 
+    <div class="flex gap-4 mb-10">
+        <a href="https://saweria.co/L4VNNN" target="_blank" class="bg-white/10 px-4 py-2 rounded-full border border-white/20 text-xs hover:bg-purple-600 transition">💰 Saweria</a>
+        <a href="https://discord.gg/invite" target="_blank" class="bg-white/10 px-4 py-2 rounded-full border border-white/20 text-xs hover:bg-indigo-600 transition">👾 Discord</a>
+    </div>
+
+    <div class="w-full flex flex-col items-center gap-6">
+
+        <div class="glass-card">
+            <h2 class="text-lg font-bold text-purple-400 font-['Orbitron'] mb-1">PETA PETA V5</h2>
+            <p class="text-gray-400 text-[11px] mb-4 uppercase">ESP Player & Monster + Anti Reset Speed</p>
+            <button onclick="copyScript('petaV5')" class="btn-copy w-full py-3 rounded-xl text-sm">SALIN SCRIPT</button>
+            <textarea id="petaV5" class="hidden">loadstring(game:HttpGet('https://sirius.menu/rayfield'))() -- LEVNEX V5 LOADED</textarea>
+        </div>
+
+        <div class="glass-card opacity-50">
+            <h2 class="text-lg font-bold text-gray-500 font-['Orbitron'] mb-1">COMING SOON</h2>
+            <p class="text-gray-500 text-[11px] mb-4 uppercase">Script baru akan segera hadir</p>
+            <button class="bg-white/5 w-full py-3 rounded-xl text-sm cursor-not-allowed" disabled>TERKUNCI</button>
+        </div>
+
+    </div>
+
+    <footer class="mt-20 text-[10px] text-gray-600 tracking-[5px] uppercase italic">
+        Levnex Official Mod
+    </footer>
+
     <script>
+        function copyScript(id) {
+            const copyText = document.getElementById(id);
+            navigator.clipboard.writeText(copyText.value);
+            alert("Berhasil disalin, Master L4VNNN! Silakan tempel di Executor Delta lu.");
+        }
+
+        // Star Background Animation
         const canvas = document.getElementById('stars');
         const ctx = canvas.getContext('2d');
         let stars = [];
-
         function init() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
             stars = [];
-            for (let i = 0; i < 200; i++) {
-                stars.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    size: Math.random() * 1.5,
-                    opacity: Math.random(),
-                    speed: Math.random() * 0.5
-                });
+            for(let i=0; i<150; i++) {
+                stars.push({x: Math.random()*canvas.width, y: Math.random()*canvas.height, s: Math.random()*2, o: Math.random(), sp: Math.random()*0.5});
             }
         }
-
         function draw() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.fillStyle = "white";
             stars.forEach(s => {
-                ctx.globalAlpha = s.opacity;
-                ctx.beginPath();
-                ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
-                ctx.fill();
-                s.y -= s.speed;
-                if (s.y < 0) s.y = canvas.height;
+                ctx.globalAlpha = s.o;
+                ctx.beginPath(); ctx.arc(s.x, s.y, s.s, 0, Math.PI*2); ctx.fill();
+                s.y -= s.sp; if(s.y < 0) s.y = canvas.height;
             });
             requestAnimationFrame(draw);
         }
-
         window.addEventListener('resize', init);
-        init();
-        draw();
+        init(); draw();
     </script>
 </body>
 </html>
